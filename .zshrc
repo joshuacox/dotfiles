@@ -82,7 +82,7 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-eval `keychain --eval id_rsa id_dsa id_ecdsa`
+eval `keychain --eval id_rsa id_dsa id_ecdsa 4157F971`
 source ~/git/ansible/hacking/env-setup
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

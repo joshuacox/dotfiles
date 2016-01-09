@@ -32,3 +32,4 @@ done
 
 # print a fortune when the terminal opens
 #fortune -a -s | lolcat
+eval `keychain --eval id_rsa id_dsa id_ecdsa 4157F971`
