@@ -31,5 +31,6 @@ done
 	tr ' ' '\n')" scp sftp ssh
 
 # print a fortune when the terminal opens
-#fortune -a -s | lolcat
+fortune -a -s | lolcat
 eval `keychain --eval id_rsa id_dsa id_ecdsa 4157F971`
+eval `keychain --agents "gpg,ssh" --dir ~/.ssh/keychain --eval id_rsa id_dsa id_ecdsa 4157F971`

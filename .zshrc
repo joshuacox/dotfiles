@@ -82,7 +82,6 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-eval `keychain --eval id_rsa id_dsa id_ecdsa 4157F971`
 source ~/git/ansible/hacking/env-setup
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -136,4 +135,6 @@ SAVEHIST=5000
 setopt appendhistory autocd extendedglob nomatch
 unsetopt beep notify
 bindkey -v
+fortune -a -s | lolcat
 # End of lines configured by zsh-newuser-install
+eval `keychain --agents "gpg,ssh" --dir ~/.ssh/keychain --eval id_rsa id_dsa id_ecdsa 4157F971`

@@ -21,7 +21,19 @@ fi
 xhost local:root
 
 # start ssh-agent
-eval $(ssh-agent)
+# eval $(ssh-agent)
+
+fixTilda
+glipper &
+chromium http://habitica.com/ &
+nm-applet &
+xscreensaver -nosplash &
+iceweasel &
+tilda &
+kmix &
+sudo systemctl restart bumblebeed &
+
+
 
 # uncomment this if not using a login manager
 # so i3 will start correctly

@@ -37,15 +37,15 @@
 #define S_cyan          #2aa198
 #define S_green         #859900
 
-*background:            S_base04
+URxvt*background:            S_base04
 URxvt*background:       [88]S_base04
-*foreground:            S_base00
-*depth:                 32
+URxvt*foreground:            S_base00
+URxvt*depth:                 32
 !!*fading:                40
 !!*fadeColor:             S_base03
-*cursorColor:           S_base1
-*pointerColorBackground:S_base01
-*pointerColorForeground:S_base1
+URxvt*cursorColor:           S_base1
+URxvt*pointerColorBackground:S_base01
+URxvt*pointerColorForeground:S_base1
 
 !! black dark/light
 *color0:                S_base02
@@ -79,8 +79,8 @@ URxvt*background:       [88]S_base04
 *color7:                S_base2
 *color15:               S_base3
 
-*utf8:                  1
-*saveLines:             999999
+URxvt*utf8:                  1
+URxvt*saveLines:             999999
 
 !-- Xft settings -- !
 Xft.dpi:        144
@@ -95,8 +95,8 @@ Xft.antialias:  1
 URxvt.font:xft:Inconsolata:pixelsize=27,style=Medium, xft:Symbola:pixelsize=19,style=Regular
 URxvt.boldFont:xft:Inconsolata:style=Bold,pixelsize=27, xft:Symbola:pixelsize=19,style=Regular
 
-*faceSize:              10
-*bellIsUrgent:          true
+URxvt*faceSize:              10
+URxvt*bellIsUrgent:          true
 
 !! scroll
 !! do not scroll with output
@@ -112,7 +112,7 @@ URxvt.secondaryScroll:  0
 URxvt.secondaryWheel:   1
 
 !! scrollbar
-*scrollBar:             false
+URxvt*scrollBar:             false
 
 URxvt*termName:         rxvt
 
