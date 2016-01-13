@@ -28,7 +28,7 @@ glipper &
 chromium http://habitica.com/ &
 nm-applet &
 xscreensaver -nosplash &
-iceweasel &
+#iceweasel &
 tilda &
 kmix &
 sudo systemctl restart bumblebeed &
