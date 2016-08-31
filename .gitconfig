@@ -153,7 +153,7 @@
 [user]
   name = Josh Cox
 	email = josh@webhosting.coop
-  signingkey = 4157F971
+  signingkey = B2E28672238525FA69887BAC9DC160A25F7CA4FB
 #[remote "origin"]
 	#fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
 [github]

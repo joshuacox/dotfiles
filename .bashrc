@@ -94,3 +94,9 @@ done
 if [[ -f $HOME/.bash_profile ]]; then
 	source $HOME/.bash_profile
 fi
+eval `keychain --agents "gpg,ssh" --dir ~/.ssh/keychain --eval id_rsa id_dsa id_ecdsa 4ECB568C`
+export LESS='-R'
+export LESSOPEN='|~/.lessfilter %s'
+export EDITOR=vim
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
