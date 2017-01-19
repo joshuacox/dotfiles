@@ -61,6 +61,10 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
+autoload -Uz compinit promptinit
+compinit
+promptinit
+
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -137,4 +141,19 @@ unsetopt beep notify
 bindkey -v
 fortune -a -s | lolcat
 # End of lines configured by zsh-newuser-install
-eval `keychain --agents "gpg,ssh" --dir ~/.ssh/keychain --eval id_rsa id_dsa id_ecdsa 4157F971`
+eval `keychain --agents "gpg,ssh" --dir ~/.ssh/keychain --eval id_rsa id_dsa id_ecdsa 4ECB568C`
+export EDITOR=vim
+export LESS='-R'
+export LESSOPEN='|~/.lessfilter %s'
+
+# This will perform chmod g-w for each file returned by compaudit
+# # to remove write access for group
+# compaudit | xargs -I % chmod g-w "%"
+# # This will perform chown to current user (Windows and Linux)
+# # for each file returned by compaudit
+# compaudit | xargs -I % chown $USER "%"
+# # Remove all dump files (which normally speed up initialization)
+# rm ~/.zcompdump*
+# # Regenerate completions file
+# compinit
+eval `keychain --eval id_rsa id_dsa id_ecdsa`

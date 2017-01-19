@@ -32,5 +32,8 @@ done
 
 # print a fortune when the terminal opens
 fortune -a -s | lolcat
-eval `keychain --eval id_rsa id_dsa id_ecdsa 4157F971`
-eval `keychain --agents "gpg,ssh" --dir ~/.ssh/keychain --eval id_rsa id_dsa id_ecdsa 4157F971`
+eval `keychain --agents "gpg,ssh" --dir ~/.ssh/keychain --eval id_rsa id_dsa id_ecdsa 4ECB568C`
+source ~/git/ansible/hacking/env-setup
+eval `keychain --eval id_rsa id_dsa id_ecdsa`
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
