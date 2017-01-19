@@ -1,0 +1,9 @@
+# ~/.tmuxinator/dropbox.yml
+
+tmux_command: byobu
+
+name: dropbox
+root: /mnt/quake/Dropbox/
+
+windows:
+  - drop:

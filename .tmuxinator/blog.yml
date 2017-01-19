@@ -1,0 +1,15 @@
+# ~/.tmuxinator/blog.yml
+
+tmux_command: byobu
+
+name: blog
+root: /mnt/unreal/git/joshuacox.github.io/
+
+windows:
+  - blog:
+        - git diff
+        - ls -lh _drafts
+  - serve:
+        - git pull
+        - git push
+        - jekyll serve --drafts

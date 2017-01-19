@@ -1,0 +1,9 @@
+# ~/.tmuxinator/brucecox.yml
+
+tmux_command: byobu
+
+name: brucecox
+root: /mnt/xyliss/git/BruceCoxMD.github.io 
+
+windows:
+  - brucecox: ls

@@ -1,0 +1,9 @@
+# ~/.tmuxinator/hydrobot.yml
+
+tmux_command: byobu
+
+name: hydrobot
+root: /mnt/xyliss/git/hydrobot/arduino/hydrobot
+
+windows:
+  - hydrobot: vim hydrobot.ino

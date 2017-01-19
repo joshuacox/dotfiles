@@ -1,0 +1,9 @@
+# ~/.tmuxinator/freezing.yml
+
+tmux_command: byobu
+
+name: freezing
+root: /mnt/xyliss/git/freezing-cyril/src/
+
+windows:
+  - freezing:

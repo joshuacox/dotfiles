@@ -1,0 +1,9 @@
+# ~/.tmuxinator/baldur.yml
+
+tmux_command: byobu
+
+name: baldur
+root: /home/bob/.local/share/Baldur\'s\ Gate\ -\ Enhanced\ Edition/
+
+windows:
+  - baldur: cd /home/bob/.local/share/Baldur\'s\ Gate\ -\ Enhanced\ Edition/ ; git status

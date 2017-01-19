@@ -1,0 +1,22 @@
+# ~/.tmuxinator/tyr.yml
+
+name: tyr
+root: ~/git
+tmux_command: byobu
+
+windows:
+  - tyr:
+      - Tyr
+      - htop
+  - rancher:
+      layout: main-vertical
+      panes:
+        - rancher86:
+          - rancher86
+          - htop
+        - rancher85:
+          - rancher85
+          - htop
+        - rancher87:
+          - rancher87
+          - htop

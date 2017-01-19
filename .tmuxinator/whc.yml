@@ -1,0 +1,15 @@
+# ~/.tmuxinator/whc.yml
+
+name: whc
+root: /mnt/xyliss/git/
+
+windows:
+  - whc: ls
+      #layout: main-vertical
+      #panes:
+        #- vim
+        #- htop
+  #- Ichabod: Ichabod
+  #- Mktulu: Mktulu
+  #- Saruman: Saruman
+  #- Zaphod: Zaphod

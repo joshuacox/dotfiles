@@ -1,0 +1,9 @@
+# ~/.tmuxinator/git.yml
+
+tmux_command: byobu
+
+name: git
+root: /mnt/xyliss/git/
+
+windows:
+  - git:

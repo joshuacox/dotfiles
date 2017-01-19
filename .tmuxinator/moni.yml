@@ -1,0 +1,72 @@
+# ~/.tmuxinator/moni.yml
+
+name: moni
+root: ~/git
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+#pre: sudo docker -d &
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t moni
+
+windows:
+  - bmon:
+      layout: main-vertical
+      panes:
+        - sudo netwatch -e wlan0 -nt
+        - sudo nethogs wlan0
+        - sudo bmon
+  - moni:
+      layout: main-horizontal
+      panes:
+        - sudo speedometer -r wlan0 -t wlan0
+        - sudo netload wlan0
+        - nload
+  - cbm:
+      layout: even-vertical
+      panes:
+        - sudo vnstat -l -i wlan0
+        - bwm-ng
+        - cbm
+  - slurm:
+      layout: main-horizontal
+      panes:
+        - sudo slurm -s -i wlan0
+        - sudo iftop -n
+        - htop
+  - traf:
+      layout: tiled
+      panes:
+        - sudo trafshow -i wlan0 tcp
+        - sudo trafshow -i wlan0 udp
+        - sudo iptraf -i all
+  - stat:
+      layout: even-horizontal
+      panes:
+        - dstat -nt
+        - ifstat -t
+        - collectl
+  #- logs:
+      #layout: main-vertical
+      #panes:
+        #- tail:
+          #- journalctl -f /var/log/messages
