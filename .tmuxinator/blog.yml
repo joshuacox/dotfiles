@@ -7,8 +7,7 @@ root: /mnt/unreal/git/joshuacox.github.io/
 
 windows:
   - blog:
-        - git diff
-        - ls -lh _drafts
+        - ls -lh _drafts && wc -l _drafts/*
   - serve:
         - git pull
         - git push

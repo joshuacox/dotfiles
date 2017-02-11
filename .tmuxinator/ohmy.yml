@@ -1,0 +1,20 @@
+# ~/.tmuxinator/ohmy.yml
+
+name: ohmy
+root: ~/git/ohmydocker-catalog
+
+tmux_command: byobu
+
+windows:
+  - ohmy:
+      layout: main-vertical
+      panes:
+        - git pull;cd templates; ls -lh
+  - whc:
+      layout: main-vertical
+      panes:
+        - cd /home/thoth/git/whc-catalog; git pull;cd templates; ls -lh
+  - tha:
+      layout: main-vertical
+      panes:
+        - cd /home/thoth/git/thalhalla-catalog; git pull;cd templates; ls -lh

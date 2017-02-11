@@ -1,0 +1,15 @@
+# ~/.tmuxinator/gaia.yml
+
+tmux_command: byobu
+
+name: gaia
+root: /mnt/unreal/git/gaianysus.github.io/
+
+windows:
+  - gaia:
+        - ls -lh _posts && wc -l _posts/*
+  - serve:
+        - git pull
+        - git push
+        - firefox http://127.0.0.1:4002 &
+        - make serve

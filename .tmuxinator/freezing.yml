@@ -3,7 +3,11 @@
 tmux_command: byobu
 
 name: freezing
-root: /mnt/xyliss/git/freezing-cyril/src/
+root: /mnt/unreal/git/freezing-cyril/src/
 
 windows:
   - freezing:
+      layout: main-vertical
+      panes:
+        - git pull;ls
+

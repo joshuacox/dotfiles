@@ -3,7 +3,7 @@
 tmux_command: byobu
 
 name: git
-root: /mnt/xyliss/git/
+root: /mnt/unreal/git/
 
 windows:
   - git:

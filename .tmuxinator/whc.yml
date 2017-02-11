@@ -1,15 +1,21 @@
 # ~/.tmuxinator/whc.yml
 
 name: whc
-root: /mnt/xyliss/git/
+root: ~/git
+
+tmux_command: byobu
 
 windows:
-  - whc: ls
-      #layout: main-vertical
-      #panes:
-        #- vim
-        #- htop
-  #- Ichabod: Ichabod
-  #- Mktulu: Mktulu
-  #- Saruman: Saruman
-  #- Zaphod: Zaphod
+  - whc:
+      layout: main-vertical
+      panes:
+        - htop
+        - sudo speedometer -r wlan0 -t wlan0
+  - Rancher:
+      layout: main-vertical
+      panes:
+        - rancher ps
+  - whcshuttle:
+      layout: main-vertical
+      panes:
+        - WHCshuttle

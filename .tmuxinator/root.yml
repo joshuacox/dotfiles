@@ -1,6 +1,6 @@
-# ~/.tmuxinator/thoth.yml
+# ~/.tmuxinator/root.yml
 
-name: thoth
+name: root 
 root: ~/git
 
 # Optional tmux socket
@@ -26,10 +26,8 @@ tmux_command: byobu
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t thoth
+# post: tmux -CC attach -t root
 
 windows:
-  - thth: 
-        - Thoth
+  - sudo: 
         - sudo -i
-        - byobu

@@ -28,12 +28,7 @@ tmux_command: byobu
 # post: tmux -CC attach -t oltorf
 
 windows:
-  - editor:
+  - oltorf:
       layout: main-vertical
       panes:
-        - vim
-        - htop
-  - Ichabod: Ichabod
-  - Mktulu: Mktulu
-  - Saruman: Saruman
-  - Zaphod: Zaphod
+        - OltorfShuttle
