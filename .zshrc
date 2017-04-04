@@ -157,3 +157,5 @@ export LESSOPEN='|~/.lessfilter %s'
 # # Regenerate completions file
 # compinit
 eval `keychain --eval id_rsa id_dsa id_ecdsa`
+eval `keychain --agents "gpg,ssh" --dir ~/.ssh/keychain --eval id_rsa id_dsa id_ecdsa 4157F971`
+export GOPATH=~/.golang
