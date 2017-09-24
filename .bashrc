@@ -102,4 +102,5 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$HOME/bin:$PATH"
 
 export NVM_DIR="/home/thoth/.nvm"
+source ~/.keyme
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
