@@ -1,6 +1,6 @@
-# ~/.tmuxinator/moni.yml
+# ~/.tmuxinator/archmoni.yml
 
-name: moni
+name: archmoni
 root: ~/git
 
 # Optional tmux socket
@@ -26,38 +26,41 @@ tmux_command: byobu
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t moni
+# post: tmux -CC attach -t archmoni
 
 windows:
   - bmon:
-      layout: main-vertical
       panes:
-        - sudo netwatch -e wlan0 -nt
-        - sudo nethogs wlan0
         - sudo bmon
-  - moni:
-      layout: main-horizontal
+  - nethogs:
       panes:
-        - sudo speedometer -r wlan0 -t wlan0
-        - sudo netload wlan0
+        - sudo nethogs wlp8s0
+  - netwatch:
+      panes:
+        - sudo netwatch -e wlp8s0 -nt
+  - speedometer:
+      panes:
+        - sudo speedometer -r wlp8s0 -t wlp8s0
+  - nload:
+      panes:
         - nload
-  - cbm:
+  - vnstat:
       layout: even-vertical
       panes:
-        - sudo vnstat -l -i wlan0
+        - sudo vnstat -l -i wlp8s0
         - bwm-ng
   - slurm:
       layout: main-horizontal
       panes:
-        - sudo slurm -s -i wlan0
+        - sudo slurm -s -i wlp8s0
         - sudo iftop -n
         - htop
   - traf:
       layout: tiled
       panes:
-        - sudo trafshow -i wlan0 tcp
-        - sudo trafshow -i wlan0 udp
-        - sudo iptraf -i all
+        - sudo trafshow -i wlp8s0 tcp
+        - sudo trafshow -i wlp8s0 udp
+        - sudo iptraf-ng -i all
   - stat:
       layout: even-horizontal
       panes:

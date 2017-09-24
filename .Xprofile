@@ -1,1 +1,2 @@
-xcompmgr -c &
+#xcompmgr -c &
+$HOME/bin/StealthXrandr

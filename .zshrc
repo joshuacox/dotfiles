@@ -86,7 +86,7 @@ promptinit
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/git/ansible/hacking/env-setup
+# source ~/git/ansible/hacking/env-setup
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # The following lines were added by compinstall
@@ -141,8 +141,8 @@ unsetopt beep notify
 bindkey -v
 fortune -a -s | lolcat
 # End of lines configured by zsh-newuser-install
-eval `keychain --agents "gpg,ssh" --dir ~/.ssh/keychain --eval id_rsa id_dsa id_ecdsa 4ECB568C`
 export EDITOR=vim
+
 export LESS='-R'
 export LESSOPEN='|~/.lessfilter %s'
 
@@ -156,4 +156,8 @@ export LESSOPEN='|~/.lessfilter %s'
 # rm ~/.zcompdump*
 # # Regenerate completions file
 # compinit
-eval `keychain --eval id_rsa id_dsa id_ecdsa`
+eval `keychain --agents "gpg,ssh" --dir ~/.ssh/keychain --eval id_rsa id_dsa id_ecdsa 4157F971`
+export GOPATH=~/.golang
+
+export NVM_DIR="/home/thoth/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

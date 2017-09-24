@@ -12,4 +12,8 @@ windows:
         - git pull
         - git push
         - firefox http://127.0.0.1:4002 &
-        - make serve
+        - make drafts
+  - blend:
+        - cd /mnt/unreal/gaiacloud/blender/containous
+  - assets:
+        - cd /mnt/unreal/git/assets

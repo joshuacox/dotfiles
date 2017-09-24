@@ -94,9 +94,12 @@ done
 if [[ -f $HOME/.bash_profile ]]; then
 	source $HOME/.bash_profile
 fi
-eval `keychain --agents "gpg,ssh" --dir ~/.ssh/keychain --eval id_rsa id_dsa id_ecdsa 4ECB568C`
 export LESS='-R'
 export LESSOPEN='|~/.lessfilter %s'
 export EDITOR=vim
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$HOME/bin:$PATH"
+
+export NVM_DIR="/home/thoth/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

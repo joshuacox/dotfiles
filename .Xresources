@@ -83,7 +83,7 @@ URxvt*utf8:                  1
 URxvt*saveLines:             999999
 
 !-- Xft settings -- !
-Xft.dpi:        130
+Xft.dpi:       72
 Xft.rgba:       rgb
 Xft.autohint:   0
 Xft.lcdfilter:  lcddefault

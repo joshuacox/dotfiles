@@ -11,4 +11,5 @@ windows:
   - serve:
         - git pull
         - git push
-        - jekyll serve --drafts
+        - firefox http://127.0.0.1:4003 &
+        - make serve

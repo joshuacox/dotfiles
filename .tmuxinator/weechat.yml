@@ -1,12 +1,12 @@
-# ~/.tmuxinator/whc.yml
+# ~/.tmuxinator/weechat.yml
 
-name: whc
+name: weechat
 root: ~/git
 
 tmux_command: byobu
 
 windows:
-  - whc:
+  - weechat:
       layout: main-vertical
       panes:
-        - WHCshuttle
+        - weechat

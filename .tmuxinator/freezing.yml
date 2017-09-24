@@ -9,5 +9,5 @@ windows:
   - freezing:
       layout: main-vertical
       panes:
-        - git pull;ls
+        - git pull;ls&&git status
 
