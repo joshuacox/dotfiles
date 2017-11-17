@@ -1,7 +1,12 @@
 #!/bin/bash
 
-keychain -q --timeout 240 --agents "gpg,ssh" --dir ~/.ssh/keychain --eval \
-id_rsa \
-id_dsa \
-id_ecdsa \
-71D400A9
+eval \
+`keychain \
+  --timeout 240 \
+  --agents "gpg,ssh" \
+  --dir ~/.ssh/keychain \
+  --eval \
+  id_rsa \
+  id_dsa \
+  id_ecdsa \
+  71D400A9 `
