@@ -86,7 +86,8 @@ promptinit
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/git/ansible/hacking/env-setup
+echo 'if you want ansible run:'
+echo "source ~/git/ansible/hacking/env-setup"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # The following lines were added by compinstall
@@ -139,7 +140,6 @@ SAVEHIST=5000
 setopt appendhistory autocd extendedglob nomatch
 unsetopt beep notify
 bindkey -v
-fortune -a -s | lolcat
 # End of lines configured by zsh-newuser-install
 export EDITOR=vim
 export LESS='-R'
@@ -160,3 +160,5 @@ export GOPATH=~/.golang
 
 export NVM_DIR="/home/thoth/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+fortune -a -s |ponysay
