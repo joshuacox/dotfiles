@@ -1,0 +1,10 @@
+# ~/.tmuxinator/arduino.yml
+
+tmux_command: byobu
+
+name: arduino
+root: /mnt/unreal/git/mkarduino/
+
+windows:
+  - arduino:
+        - make
