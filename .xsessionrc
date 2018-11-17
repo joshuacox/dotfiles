@@ -23,20 +23,20 @@ xhost local:root
 # start ssh-agent
 # eval $(ssh-agent)
 
-fixTilda
-glipper &
-chromium http://habitica.com/ &
-nm-applet &
+#fixTilda
+#glipper &
+#chromium http://habitica.com/ &
+#nm-applet &
 xscreensaver -nosplash &
 #iceweasel &
-tilda &
-kmix &
-sudo systemctl restart bumblebeed &
-mkdir -p /tmp/.awesome
+#tilda &
+#kmix &
+#sudo systemctl restart bumblebeed &
+#mkdir -p /tmp/.awesome
 
-PowerSave &
-sleep 1
-PowerSave &
+#PowerSave &
+#sleep 1
+#PowerSave &
 
 
 # exec awesome >> /tmp/.awesome/logfile 2>&1
